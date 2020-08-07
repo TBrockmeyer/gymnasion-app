@@ -27,3 +27,11 @@ If you don't want to dig into the various dependencies that need to be set up fo
 https://devcenter.heroku.com/articles/python-support
 As our Heroku App is already set up to build automatically from each push to the GitHub repository, we download the zip of the ["Python getting started package"](https://github.com/heroku/python-getting-started.git) (described [here](https://devcenter.heroku.com/articles/getting-started-with-python#prepare-the-app)) and extract its content directly into the folder synched with GitHub.
 
+Now is a good time to save progress so far in GitHub, so that there's a branch with a basic Python App version to start over from, if necessary:
+(as described in [this Stackoverflow thread about how to create remote branches](https://stackoverflow.com/questions/1519006/how-do-you-create-a-remote-git-branch))
+```
+git checkout -b python-base
+git push origin python-base:python-base
+```
+
+
