@@ -17,3 +17,8 @@ def db(request):
     greetings = Greeting.objects.all()
 
     return render(request, "db.html", {"greetings": greetings})
+
+
+def chat(request):
+    # return HttpResponse('Hello from Python!')
+    return render(request, "chat.html")
