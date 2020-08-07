@@ -21,5 +21,9 @@ Read here how to switch on the automatic deployment from GitHub to Heroku:
 https://devcenter.heroku.com/articles/github-integration#automatic-deploys
 Just go to the "Deploy" tab in your Heroku app and switch on "Automatic Deploys".
 
-### D.
+### D. Prepare a deployable application
+When deploying an app to Heroku, it needs to be set up in a way that allows Heroku to create a [slug](https://devcenter.heroku.com/articles/buildpacks) (an executable application copy) from your application. For this, it needs to contain a [Procfile](https://devcenter.heroku.com/articles/procfile) that tells Heroku which commands are executed by the app on startup, such as the "web worker".
+If you don't want to dig into the various dependencies that need to be set up for a runable app, you can also use pre-fabricated basic apps from the ["Getting Started"](https://devcenter.heroku.com/start) section. Heroku provides these basic apps for various languages, such as Python, Java, Clojure, Ruby, Node.js... Here we go for the Python version:
+https://devcenter.heroku.com/articles/python-support
+As our Heroku App is already set up to build automatically from each push to the GitHub repository, we download the zip of the ["Python getting started package"](https://github.com/heroku/python-getting-started.git) (described [here](https://devcenter.heroku.com/articles/getting-started-with-python#prepare-the-app)) and extract its content directly into the folder synched with GitHub.
 
