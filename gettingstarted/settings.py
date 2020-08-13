@@ -121,3 +121,13 @@ django_heroku.settings(locals())
 
 # Channels (Channels docs tutorial)
 ASGI_APPLICATION = 'routing.application' # Other than specified in the (Channels docs tutorial), we need to use "routing.application" and not "mysite.routing.application" here.
+
+# Channels (Channels docs tutorial page 20)
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
