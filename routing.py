@@ -1,5 +1,4 @@
 # mysite/routing.py
-#from channels.routing import ProtocolTypeRouter
 from channels.auth import AuthMiddlewareStack # (Channels docs tutorial, page 19)
 from channels.routing import ProtocolTypeRouter, URLRouter # (Channels docs tutorial, page 19)
 import chat.routing # (Channels docs tutorial, page 19)
